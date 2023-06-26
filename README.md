@@ -20,7 +20,7 @@ ___
 - buzzer
 - relay
 
-## _Languages and works:_
+## _Works:_
 As for the language, I have used Python for the main script and HTML for the webpage. The webpage can be accessed through the IP address of the raspberry pi. As it runs on the IP address of the raspberry pi, through the webpage you can set alarms and reminders, control lights, activate motion sensor lights, and do other things.
 
 > Smart_table.py is the main file.<br>
