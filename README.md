@@ -1,9 +1,10 @@
 # Smart-Table1
 The implementation of a smart table as part of a home automation system.
 
-## _Used Languages is:_
+## _Used Languages are:_
 
 ![Image Description](https://d1q6f0aelx0por.cloudfront.net/product-logos/library-python-logo.png)
+<br>
 ![Image Description](https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/180px-HTML5_logo_and_wordmark.svg.png)
 ___
 
