@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+         
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+      
+      .flex{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+      }
+      
+      .header {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        background-color: #f1f1f1;
+        border-bottom: 2px solid #ddd;
+        padding: 10px;
+      }
+      
+      .header h1 {
+        margin: 0;
+        font-size: 30px;
+        text-align: center;
+        border: 1px solid black;
+        padding: 5px;
+      }
+      
+      .back-button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-right: auto;
+        cursor: pointer;
+      }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 2rem;
+            color: #444;
+            text-shadow: 1px 1px 1px #ccc;
+        }
+
+        form {
+            text-align: center;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px #ccc;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        label {
+            display: inline-block;
+            width: 80px;
+            font-weight: bold;
+            margin-right: 10px;
+            color: #444;
+        }
+
+        input[type="time"] {
+            width: 150px;
+            padding: 5px;
+            margin-right: 10px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+
+        button[type="submit"] {
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #2e8b57;
+        }
+
+        table {
+            width: 80%;
+            margin: auto;
+            border-collapse: collapse;
+            border: 1px solid #ddd;
+            box-shadow: 2px 2px 5px #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: center;
+            color: #444;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px #ccc;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #2e8b57;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .btn-group button {
+            padding: 10px;
+            margin-right: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn-group button:hover {
+            background-color: #2e8b57;
+        }
+    </style>
+</head>
+
+<body>
+  <div class="header">
+    <form action="/alarm" method="POST">
+            <button class="back-button">Back</button>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+      <h1>MEZ</h1>
+      </form>
+      <div></div>
+    </div>
+    <center><h1>Edit Alarm</h1>
+    <div class="flex">
+    <form method="POST" action="{{ url_for('edit_alarm', alarm_id=alarm['id']) }}">
+        <label for="time">Time:</label>
+        <input type="time" name="time" value="{{ alarm['time'] }}" required>
+        <br>
+        <button type="submit">Save</button>
+    </div>
+    </form>
+</body>
+
+</html>
